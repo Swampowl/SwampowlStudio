@@ -1,31 +1,3 @@
-// 🌗 THEME TOGGLE with localStorage
-const themeBtn = document.getElementById("themeToggle");
-
-function applyTheme(theme) {
-  document.body.classList.toggle("light-mode", theme === "light");
-  if (themeBtn) themeBtn.textContent = theme === "light" ? "🌞" : "🌙";
-  localStorage.setItem("theme", theme);
-}
-
-if (themeBtn) {
-  themeBtn.addEventListener("click", () => {
-    const newTheme = document.body.classList.contains("light-mode") ? "dark" : "light";
-    applyTheme(newTheme);
-  });
-}
-
-const savedTheme = localStorage.getItem("theme") || "dark";
-applyTheme(savedTheme);
-
-// 🌄 PARALLAX EFFECT
-window.addEventListener("scroll", () => {
-  const parallaxSections = document.querySelectorAll(".parallax");
-  parallaxSections.forEach(section => {
-    const scroll = window.scrollY;
-    section.style.backgroundPositionY = -(scroll * 0.3) + "px";
-  });
-});
-
 // 🖼️ DYNAMIC MEDIA GALLERY
 const galleryImages = ["screenshot1.jpg", "screenshot2.jpg", "screenshot3.jpg"];
 const gallery = document.getElementById("mediaGallery");
