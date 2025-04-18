@@ -62,11 +62,45 @@ body {
   color: var(--text-color);
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--highlight-color);
+  min-width: 160px;
+  z-index: 1000;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 /* HERO SECTION */
 .hero {
-  position: relative;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,6 +110,14 @@ body {
   border-bottom: 6px solid var(--accent-color);
   animation: flicker 2s infinite;
 }
+
+.hero-content {
+  max-width: 90%;
+  margin: auto;
+  padding: 0 20px;
+  z-index: 1;
+}
+
 
 #heroVideo {
   position: absolute;
@@ -153,6 +195,81 @@ h2 {
   margin-bottom: 10px;
   font-weight: 300;
 }
+/* FOOTER  */
+
+.footer {
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  margin-top: 60px;
+  border-top: 2px solid var(--accent-color);
+}
+
+.footer a {
+  color: var(--text-color);
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--link-hover);
+}
+
+/* COOKIES */
+.cookie-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.cookie-box {
+  background-color: var(--highlight-color);
+  color: var(--contrast-color);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  max-width: 90%;
+  width: 400px;
+  text-align: center;
+}
+
+.cookie-box p {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.cookie-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cookie-buttons button {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cookie-buttons button:hover {
+  background-color: var(--link-hover);
+  color: var(--bg-color);
+}
+
+
 
 /* CONTACT FORM */
 .contact input,

@@ -9,13 +9,38 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="nav-center">
+      <div class="nav-center">
+        <div class="dropdown">
           <a href="index.html">Home</a>
-          <a href="media.html">Media</a>
-          <a href="blog.html">Blog</a>
-          <a href="contact.html">Contact</a>
-         <!--  <button id="themeToggle">🌙</button> -->
+          <div class="dropdown-content">
+            <a href="index.html#about">About the Game</a>
+            <a href="index.html#highlights">Highlights</a>
+            <a href="index.html#updates">Dev Updates</a>
+            <a href="index.html#company">Company</a>
+          </div>
         </div>
+        
+      
+        <div class="dropdown">
+          <a href="media.html">Media</a>
+          <div class="dropdown-content">
+            <a href="media.html#pictures">Pictures</a>
+            <a href="media.html#videos">Videos</a>
+            <a href="media.html#downloads">Downloads</a>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <a href="blog.html">Blog</a>
+          <div class="dropdown-content">
+            <a href="blog.html#recent">Recent Updates</a>
+            <a href="blog.html#current">Working On Now</a>
+            <a href="blog.html#journal">Dev Journal</a>
+          </div>
+        </div>
+      
+        <a href="contact.html">Contact</a>
+      </div>
       </nav>
       
   <!-- HERO SECTION -->
@@ -31,31 +56,44 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="about">
+  <section id="about">
     <h2>About the Game</h2>
-    <p>Step into the arena of chaos — a universe where your choices shape the battlefield.</p>
+    <!-- game info here -->
   </section>
-
-  <!-- GALLERY -->
-  <section class="media parallax">
-    <h2>Media Gallery</h2>
-    <div class="gallery" id="mediaGallery">
-      <!-- JS will populate dynamic images here -->
+  
+  <section id="highlights">
+    <h2>Highlights</h2>
+    <!-- maybe a few key images or trailer here -->
+  </section>
+  
+  <section id="updates">
+    <h2>Dev Updates</h2>
+    <!-- update list -->
+  </section>
+  
+  <section id="company">
+    <h2>Company</h2>
+    <!-- contact form or info -->
+  </section>
+  <div id="cookiePopup" class="cookie-popup">
+    <div class="cookie-box">
+      <p>
+        This website uses cookies to enhance your experience.<br>
+        <a href="contact.html#legal">Learn more</a>
+      </p>
+      <div class="cookie-buttons">
+        <button id="acceptCookies">Accept</button>
+        <button id="denyCookies">Deny</button>
+      </div>
     </div>
-  </section>
-
-  <!-- UPDATES -->
-  <section class="updates">
-    <h2>Development Updates</h2>
-    <ul id="devUpdates"></ul>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact">
-    <h2>Stay Connected</h2>
-    <p>Follow us on socials or drop us an email!</p>
-  </section>
-
+  </div>
+  <footer class="footer">
+    <p>&copy; 2025 Your Game Studio Name. All rights reserved.</p>
+    <a href="contact.html#legal">Imprint & Legal Info</a>
+  </footer>
   <script src="script.js"></script>
+
+  
 </body>
+
 </html>

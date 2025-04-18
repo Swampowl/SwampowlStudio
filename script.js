@@ -27,3 +27,27 @@ if (updatesList) {
     updatesList.appendChild(li);
   });
 }
+
+
+// COOKIES
+const cookiePopup = document.getElementById("cookiePopup");
+const acceptBtn = document.getElementById("acceptCookies");
+const denyBtn = document.getElementById("denyCookies");
+
+const consentStatus = localStorage.getItem("cookieConsent");
+
+if (cookiePopup && !consentStatus) {
+  cookiePopup.style.display = "flex";
+}
+
+acceptBtn?.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "accepted");
+  cookiePopup.style.display = "none";
+  console.log("Cookies accepted");
+});
+
+denyBtn?.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "denied");
+  cookiePopup.style.display = "none";
+  console.log("Cookies denied");
+});

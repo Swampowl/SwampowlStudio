@@ -7,13 +7,38 @@
   <script src="script.js" defer></script>
 </head>
 <nav class="navbar">
-    <div class="nav-center">
+  <div class="nav-center">
+    <div class="dropdown">
       <a href="index.html">Home</a>
-      <a href="media.html">Media</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-      <!--  <button id="themeToggle">🌙</button> -->
+      <div class="dropdown-content">
+        <a href="index.html#about">About the Game</a>
+        <a href="index.html#highlights">Highlights</a>
+        <a href="index.html#updates">Dev Updates</a>
+        <a href="index.html#company">Company</a>
+      </div>
     </div>
+    
+  
+    <div class="dropdown">
+      <a href="media.html">Media</a>
+      <div class="dropdown-content">
+        <a href="media.html#pictures">Pictures</a>
+        <a href="media.html#videos">Videos</a>
+        <a href="media.html#downloads">Downloads</a>
+      </div>
+    </div>
+  
+    <div class="dropdown">
+      <a href="blog.html">Blog</a>
+      <div class="dropdown-content">
+        <a href="blog.html#recent">Recent Updates</a>
+        <a href="blog.html#current">Working On Now</a>
+        <a href="blog.html#journal">Dev Journal</a>
+      </div>
+    </div>
+  
+    <a href="contact.html">Contact</a>
+  </div>
   </nav>
   
 
@@ -26,5 +51,44 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
+  <section id="legal">
+    <h2>Imprint & Legal Notice</h2>
+    <p>
+      This website is operated by <strong>Your Game Studio Name</strong>.<br>
+      Responsible for content under § 5 TMG: <br>
+      <strong>Firstname Lastname</strong><br>
+      Street Address 123<br>
+      12345 City, Country<br>
+      Email: contact@yourstudio.com
+    </p>
+  
+    <p>
+      According to § 55 Abs. 2 RStV, we are responsible for the content on this site.
+      The content of this website has been created with the greatest possible care. However, we do not guarantee the accuracy, completeness, or timeliness of the content.
+    </p>
+  
+    <p>
+      Dispute resolution: The European Commission provides a platform for online dispute resolution (OS): 
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>
+    </p>
+  </section>
+  <div id="cookiePopup" class="cookie-popup">
+    <div class="cookie-box">
+      <p>
+        This website uses cookies to enhance your experience.<br>
+        <a href="contact.html#legal">Learn more</a>
+      </p>
+      <div class="cookie-buttons">
+        <button id="acceptCookies">Accept</button>
+        <button id="denyCookies">Deny</button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2025 Your Game Studio Name. All rights reserved.</p>
+    <a href="contact.html#legal">Imprint & Legal Info</a>
+  </footer>
+
 </body>
+
 </html>

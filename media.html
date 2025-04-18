@@ -12,21 +12,72 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-center">
-      <a href="index.html">Home</a>
-      <a href="media.html">Media</a>
-      <a href="blog.html">Blog</a>
+      <div class="dropdown">
+        <a href="index.html">Home</a>
+        <div class="dropdown-content">
+          <a href="index.html#about">About the Game</a>
+          <a href="index.html#highlights">Highlights</a>
+          <a href="index.html#updates">Dev Updates</a>
+          <a href="index.html#company">Company</a>
+        </div>
+      </div>
+      
+    
+      <div class="dropdown">
+        <a href="media.html">Media</a>
+        <div class="dropdown-content">
+          <a href="media.html#pictures">Pictures</a>
+          <a href="media.html#videos">Videos</a>
+          <a href="media.html#downloads">Downloads</a>
+        </div>
+      </div>
+    
+      <div class="dropdown">
+        <a href="blog.html">Blog</a>
+        <div class="dropdown-content">
+          <a href="blog.html#recent">Recent Updates</a>
+          <a href="blog.html#current">Working On Now</a>
+          <a href="blog.html#journal">Dev Journal</a>
+        </div>
+      </div>
+    
       <a href="contact.html">Contact</a>
-     <!--  <button id="themeToggle">🌙</button> -->
     </div>
   </nav>
 
   <!-- MEDIA GALLERY SECTION -->
-  <section class="media">
-    <h2>Media Gallery</h2>
-    <div class="gallery" id="mediaGallery">
-      <!-- Images will be dynamically injected here by JS -->
-    </div>
+  <section id="pictures">
+    <h2>Pictures</h2>
+    <!-- gallery goes here -->
   </section>
+  
+  <section id="videos">
+    <h2>Videos</h2>
+    <!-- video embeds or list -->
+  </section>
+  
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <!-- download buttons -->
+  </section>
+  <div id="cookiePopup" class="cookie-popup">
+    <div class="cookie-box">
+      <p>
+        This website uses cookies to enhance your experience.<br>
+        <a href="contact.html#legal">Learn more</a>
+      </p>
+      <div class="cookie-buttons">
+        <button id="acceptCookies">Accept</button>
+        <button id="denyCookies">Deny</button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2025 Your Game Studio Name. All rights reserved.</p>
+    <a href="contact.html#legal">Imprint & Legal Info</a>
+  </footer>
 
+  
 </body>
+
 </html>
