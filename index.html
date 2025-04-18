@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Epic Game Site</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-center">
+          <a href="index.html">Home</a>
+          <a href="media.html">Media</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <button id="themeToggle">🌙</button>
+        </div>
+      </nav>
+      
+  <!-- HERO SECTION -->
+  <section class="hero parallax">
+    <video autoplay muted loop id="heroVideo">
+      <source src="assets/videos/your-video.mp4" type="video/mp4" />
+      Your browser does not support video.
+    </video>
+    <div class="hero-content">
+      <h1>GAME TITLE</h1>
+      <p>Epic tagline goes here...</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>About the Game</h2>
+    <p>Step into the arena of chaos — a universe where your choices shape the battlefield.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="media parallax">
+    <h2>Media Gallery</h2>
+    <div class="gallery" id="mediaGallery">
+      <!-- JS will populate dynamic images here -->
+    </div>
+  </section>
+
+  <!-- UPDATES -->
+  <section class="updates">
+    <h2>Development Updates</h2>
+    <ul id="devUpdates"></ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Stay Connected</h2>
+    <p>Follow us on socials or drop us an email!</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
