@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .not-found {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(to bottom, #1e1b18, #000);
+      text-align: center;
+      color: var(--color-light);
+      font-family: var(--font-primary);
+      padding: 2rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .not-found h1 {
+      font-size: 5rem;
+      color: var(--color-secondary);
+      text-shadow: 0 0 12px var(--color-secondary);
+    }
+
+    .not-found p {
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      color: var(--color-light);
+    }
+
+    .not-found a {
+      background-color: var(--color-accent);
+      color: var(--color-light);
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      font-family: var(--font-secondary);
+    }
+
+    .not-found a:hover {
+      background-color: var(--color-secondary);
+      color: var(--color-dark);
+    }
+
+    .not-found .glow {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      animation: pulseGlow 4s infinite ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.4;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.7;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="not-found">
+    <div class="glow"></div>
+    <p id="quoteText">
+        You have wandered into the void...<br>
+        The page you seek cannot be found.
+      </p>
+    <img src="assets/images/floating-scroll.png" alt="Ancient Scroll" class="floating-scroll" />
+    <h1>404</h1>
+    <p>You have wandered into the void...<br>The page you seek cannot be found.</p>
+    <a href="index.html">Return to the Kingdom</a>
+  </div>
+  <script>
+    const quotes = [
+      "Even the wisest cannot see all ends. — Gandalf",
+      "All who wander are not lost. — Tolkien",
+      "You must forge your own path through the darkness.",
+      "Beware, for forgotten pages hold forgotten power.",
+      "Only the bold may find what lies beyond the veil."
+    ];
+  
+    const quoteEl = document.getElementById("quoteText");
+    const random = quotes[Math.floor(Math.random() * quotes.length)];
+  
+    quoteEl.innerHTML = random;
+  </script>
+</body>
+</html>

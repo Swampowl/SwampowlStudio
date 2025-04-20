@@ -30,24 +30,27 @@ if (updatesList) {
 
 
 // COOKIES
-const cookiePopup = document.getElementById("cookiePopup");
+const overlay = document.getElementById("cookieOverlay");
 const acceptBtn = document.getElementById("acceptCookies");
 const denyBtn = document.getElementById("denyCookies");
 
-const consentStatus = localStorage.getItem("cookieConsent");
+if (overlay && !localStorage.getItem("cookieConsent")) {
+  overlay.style.display = "flex";
+  document.body.style.overflow = "hidden"; // prevent scroll
+}
 
-if (cookiePopup && !consentStatus) {
-  cookiePopup.style.display = "flex";
+function closeCookieOverlay() {
+  overlay.style.display = "none";
+  document.body.style.overflow = ""; // restore scroll
 }
 
 acceptBtn?.addEventListener("click", () => {
   localStorage.setItem("cookieConsent", "accepted");
-  cookiePopup.style.display = "none";
-  console.log("Cookies accepted");
+  closeCookieOverlay();
 });
 
 denyBtn?.addEventListener("click", () => {
   localStorage.setItem("cookieConsent", "denied");
-  cookiePopup.style.display = "none";
-  console.log("Cookies denied");
+  closeCookieOverlay();
 });
+
